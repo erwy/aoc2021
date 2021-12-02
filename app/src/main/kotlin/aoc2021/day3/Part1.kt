@@ -1,4 +1,4 @@
-package aoc2021.day2
+package aoc2021.day3
 
 import aoc2021.utils.Part
 
