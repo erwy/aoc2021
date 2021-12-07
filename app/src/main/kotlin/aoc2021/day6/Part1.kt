@@ -5,7 +5,11 @@ import aoc2021.utils.Part
 class Part1(private val input: List<String>) : Part {
 
     override fun run(): Long {
-        var counterToNumberOfFish = input[0].split(",").map { it.toInt() }.groupingBy { it }.eachCount()
+        var counterToNumberOfFish = input[0]
+            .split(",")
+            .map { it.toInt() }
+            .groupingBy { it }
+            .eachCount()
         for (i in 1..80) {
             val newMap = mutableMapOf<Int, Int>()
             val newFishThisRound = counterToNumberOfFish[0] ?: 0
